@@ -15,14 +15,36 @@ var nicePic = 0;
 var cphPic = 0;
 
 $("#number-to-guess").text(targetNum);
-var counter = 0;
+// var counter = 0;
 
 
 // generate random number (target)
 
 targetNum = Math.floor(Math.random() * 101) + 19;
 
-// value of button clicked
+
+// generate random number for images
+
+function picNumbers (){
+  return Math.floor(Math.random() * 12) +1;
+};
+
+
+// value of button clicked/ start game
+
+function start (){
+   var parisPic = picNumbers();
+   var bcnPic = picNumbers();
+   var nicePic = picNumbers();
+   var cphPic = picNumbers();
+
+   $("#totalNumber").text("0")
+    guesses = 0;
+
+    $("#targetNumber").text(targetNum);
+
+}
+
 // when clikc update the score
 // wins when  target num is met
 // lost if goes + than target num
@@ -35,11 +57,11 @@ targetNum = Math.floor(Math.random() * 101) + 19;
 function start(){
     // generate random number
     //intialize all shoe values
-    shoeval1 = Math.floor(Math.random()*12) +1;
+    shoeval1 = picNumbers();
     shoeval2 = Math.floor(Math.random() * 12) + 1;
     shoeval3 = Math.floor(Math.random() * 12) + 1;
     shoeval4 = Math.floor(Math.random() * 12) + 1;
-    randomNumber = Math.floor(Math.random() * 101) + 19;
+    
 
     $("#totalNumber").text("0")
     guesses = 0;
