@@ -5,7 +5,23 @@
 
 
 // create variables
+var targetNum = 0;
+var wins = 0;
+var losses = 0;
+var guesses = 0;
+var parisPic = 0;
+var bcnPic = 0;
+var nicePic = 0;
+var cphPic = 0;
+
+$("#number-to-guess").text(targetNum);
+var counter = 0;
+
+
 // generate random number (target)
+
+targetNum = Math.floor(Math.random() * 101) + 19;
+
 // value of button clicked
 // when clikc update the score
 // wins when  target num is met
@@ -16,10 +32,20 @@
 
 
 
+function start(){
+    // generate random number
+    //intialize all shoe values
+    shoeval1 = Math.floor(Math.random()*12) +1;
+    shoeval2 = Math.floor(Math.random() * 12) + 1;
+    shoeval3 = Math.floor(Math.random() * 12) + 1;
+    shoeval4 = Math.floor(Math.random() * 12) + 1;
+    randomNumber = Math.floor(Math.random() * 101) + 19;
 
+    $("#totalNumber").text("0")
+    guesses = 0;
 
-
-
+    $("#randomNumber").text(randomNumber)
+}
 
 
 
