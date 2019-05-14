@@ -33,10 +33,10 @@ function picNumbers (){
 // value of button clicked/ start game
 
 function start (){
-   var parisPic = picNumbers();
-   var bcnPic = picNumbers();
-   var nicePic = picNumbers();
-   var cphPic = picNumbers();
+   parisPic = picNumbers();
+   bcnPic = picNumbers();
+   nicePic = picNumbers();
+   cphPic = picNumbers();
 
    $("#totalNumber").text("0")
     guesses = 0;
@@ -46,6 +46,10 @@ function start (){
 }
 
 // when clikc update the score
+
+
+
+
 // wins when  target num is met
 // lost if goes + than target num
 // win/lose game restarts
@@ -53,20 +57,21 @@ function start (){
 // show num of games played
 
 
+function play() {
+   if (guesses === randomNumber){
+  wins += 1; 
+       start()
 
-function start(){
-    // generate random number
-    //intialize all shoe values
-    shoeval1 = picNumbers();
-    shoeval2 = Math.floor(Math.random() * 12) + 1;
-    shoeval3 = Math.floor(Math.random() * 12) + 1;
-    shoeval4 = Math.floor(Math.random() * 12) + 1;
+       $("#wins").text(" Wins: " + wins) 
     
 
-    $("#totalNumber").text("0")
-    guesses = 0;
+} else if (guesses > randomNumber){
+  lost += 1;   
+       start()
+       $("#losses").text("Losses: " + lost) 
 
-    $("#randomNumber").text(randomNumber)
+}
+
 }
 
 
@@ -79,27 +84,6 @@ function start(){
 
 
 
-// Variables
-// parisPic = 0
-// bcnPic = 0
-// cphPic = 0
-// nicePic = 0
-// targetNum = 0
-// wins = 0
-// lost = 0
-
-
-// function start(){
-//    // generate random number
-//    //intialize all shoe values
-//    //shoeVal1 = Math.floor(Math.random()*101) +19
-//    $("#totalNumber").text("0")
-// }
-
-// function start(){
-// var randomNum = Math.floor(Math.random()*101)+19;
-
-// }
 
 
 // $("#id1")
