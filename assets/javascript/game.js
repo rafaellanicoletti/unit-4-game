@@ -45,71 +45,57 @@ function start (){
 
 }
 
-// when clikc update the score
+// when clicked update the score
 
+$("#button1").on("click", function(){
+   guesses = guesses + parisPic;
+   $("#totalNumber").text(guesses);
+
+   play()
+})
+
+$("#button2").on("click", function(){
+   guesses = guesses + bcnPic;
+   $("#totalNumber").text(guesses);
+
+   play();
+})
+
+$("#button3").on("click", function(){
+   guesses = guesses + nicePic;
+   $("#totalNumber").text(guesses);
+
+   play()
+})
+
+$("#button4").on("click", function(){
+   guesses = guesses + cphPic;
+   $("#totalNumber").text(guesses);
+
+   play()
+})
 
 
 
 // wins when  target num is met
 // lost if goes + than target num
-// win/lose game restarts
-// when restarted a new random num generates, scores back to zero.
 // show num of games played
 
-
 function play() {
-   if (guesses === randomNumber){
-  wins += 1; 
-       start()
-
-       $("#wins").text(" Wins: " + wins) 
-    
-
-} else if (guesses > randomNumber){
-  lost += 1;   
-       start()
-       $("#losses").text("Losses: " + lost) 
-
-}
-
+   if (guesses === targetNum) {
+      wins++;
+      start()
+      $("#wins").text("Wins: " + wins);
+   } else (guesses > targetNum) {
+      losses++;
+      start()
+      $("#losses").text("Losses: " + losses)
+      }
 }
 
 
+// win/lose game restarts
+// when restarted a new random num generates, scores back to zero.
 
-
-
-
-
-
-
-
-
-
-
-// $("#id1")
-
-// $("#id1").on("click", function(){
-//    guesses = guesses + shoeval1
-//    $("#totalNumber").text(guesses)
-// play()
-
-// })
-// $("#id2").on("click", function(){
-//    guesses = guesses + shoeval3
-// })
-// $("#id3").on("click", function(){
-//    guesses = guesses + shoeval3
-
-// })
-
-
-// play()
-// if (guesses == randomNumber){
-//     wins += 1;
-// } else (guesses !== randomNumber){
-//     lost += 1;
-// }
-
-// start()
-
+start();
 
