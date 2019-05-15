@@ -22,3 +22,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+img {
+    width: 250px;
+    height:300px;
+}
+
+#col-md-auto{
+    justify-content: center;
+}
