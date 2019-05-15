@@ -84,11 +84,13 @@ $("#button4").on("click", function(){
 function play() {
    if (guesses === targetNum) {
       wins++;
+      alert("You win!!!!");
       start()
       $("#wins").text("Wins: " + wins);
    } 
    else (guesses > targetNum) 
       losses++;
+      alert("You lost!");
       start()
       $("#losses").text("Losses: " + losses)
       
