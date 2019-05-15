@@ -86,11 +86,12 @@ function play() {
       wins++;
       start()
       $("#wins").text("Wins: " + wins);
-   } else (guesses > targetNum) {
+   } 
+   else (guesses > targetNum) 
       losses++;
       start()
       $("#losses").text("Losses: " + losses)
-      }
+      
 }
 
 

@@ -1,20 +1,23 @@
 
-
-
 h1 {
-    background-color: orange;
+    background-color: #3E310D;
     color: white;
     width: 300px;
     padding: 20px;
+    font-family: fantasy;
 
 }
 
 p {
-    background-color: #FCC3B7;
-    color: #60A574;
-    font-weight: bold;
+    background-color: #3E310D;
+    color: white;
     width: 700px;
     line-height: 40px;
+    padding: 20px;
+    font-family: fantasy;
+    font-weight: 200;
+    text-align: justify;
+    
 }
 
 body{
@@ -26,8 +29,28 @@ body{
 img {
     width: 250px;
     height:300px;
+    padding: 0;
+   
 }
 
-#col-md-auto{
-    justify-content: center;
+#buttonSelection {
+    margin-bottom: 80px;
+}
+
+
+#scoreSection { 
+    padding: 30px;
+    margin: 50px;
+    background-color: #3E310D;
+    color: white;
+    font-family: fantasy;
+    display: flex;
+
+}
+
+footer {
+    background-color: #3E310D;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
