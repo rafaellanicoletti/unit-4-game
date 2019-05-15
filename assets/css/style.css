@@ -11,7 +11,7 @@ h1 {
 p {
     background-color: #3E310D;
     color: white;
-    width: 700px;
+    width: 100%;
     line-height: 40px;
     padding: 20px;
     font-family: fantasy;
@@ -19,7 +19,9 @@ p {
     text-align: justify;
     
 }
-
+button {
+    z-index: 2;
+}
 body{
     background: url("https://wallpaperaccess.com/full/965738.jpg");
     background-repeat: no-repeat;

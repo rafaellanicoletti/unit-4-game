@@ -14,13 +14,11 @@ var bcnPic = 0;
 var nicePic = 0;
 var cphPic = 0;
 
-$("#number-to-guess").text(targetNum);
+// $("#number-to-guess").text(targetNum);
 // var counter = 0;
 
 
-// generate random number (target)
 
-targetNum = Math.floor(Math.random() * 101) + 19;
 
 
 // generate random number for images
@@ -30,18 +28,20 @@ function picNumbers (){
 };
 
 
-// value of button clicked/ start game
+// value of button clicked start game
 
 function start (){
+
+// generate random number (target)
+   targetNum = Math.floor(Math.random() * 101) + 19;
    parisPic = picNumbers();
    bcnPic = picNumbers();
    nicePic = picNumbers();
    cphPic = picNumbers();
 
-   $("#totalNumber").text("0")
     guesses = 0;
 
-    $("#targetNumber").text(targetNum);
+   $("#targetNumber").text("Target Number: " + targetNum);
 
 }
 
@@ -49,30 +49,32 @@ function start (){
 
 $("#button1").on("click", function(){
    guesses = guesses + parisPic;
-   $("#totalNumber").text(guesses);
-
+   $("#totalNumber").text("Total Number: " +guesses);
    play()
+   console.log(guesses)
+   
 })
 
 $("#button2").on("click", function(){
    guesses = guesses + bcnPic;
-   $("#totalNumber").text(guesses);
+   $("#totalNumber").text("Total Number: " +guesses);
 
    play();
 })
 
 $("#button3").on("click", function(){
    guesses = guesses + nicePic;
-   $("#totalNumber").text(guesses);
-
+   $("#totalNumber").text("Total Number: " +guesses);
+   
    play()
 })
 
 $("#button4").on("click", function(){
    guesses = guesses + cphPic;
-   $("#totalNumber").text(guesses);
-
+   $("#totalNumber").text("Total Number: " +guesses);
+   
    play()
+   
 })
 
 
@@ -88,11 +90,12 @@ function play() {
       start()
       $("#wins").text("Wins: " + wins);
    } 
-   else (guesses > targetNum) 
+   else if (guesses > targetNum) {
       losses++;
       alert("You lost!");
-      start()
       $("#losses").text("Losses: " + losses)
+      start()
+   }
       
 }
 
